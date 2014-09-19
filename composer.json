@@ -1,0 +1,22 @@
+{
+    "name": "cunity",
+    "description": "Cunity is an open-source social network that was programmed out of the need of having an own social network, which is not controlled by some big internet company. Cunity offers a variety of modules such as friends, forum, pinboard, chat, photo-gallery, messaging, etc.",
+    "minimum-stability": "dev",
+    "require": {
+        "php":  "~5.5",
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "*",
+        "behat/mink-selenium-driver": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-sahi-driver": "*",
+        "behat/mink-zombie-driver": "*",
+        "phpunit/phpunit": "~4",
+        "phpmd/phpmd":  "~2",
+        "squizlabs/php_codesniffer":    "~2"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
