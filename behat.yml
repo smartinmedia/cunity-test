@@ -1,8 +1,7 @@
 default:
     extensions:
         Behat\MinkExtension\Extension:
-            base_url: http://10.135.0.52/
-            base_url: http://localhost/cunity/src/
+            base_url: http://10.135.0.52/cunity/
             default_session: goutte
             javascript_session: selenium2
             goutte: ~

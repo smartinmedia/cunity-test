@@ -29,13 +29,12 @@ class PreparationContext extends RawMinkContext
     public function maximizeWindow(ScenarioEvent $event)
     {
         /** @var $driver Selenium2Driver */
-#        $driver = $this->getSession()->getDriver();
-#
-#        if ($driver instanceof Selenium2Driver)
-#        {
-#            $this->getSession()->resizeWindow(1480, 850);
-#        }
-#
-#        $this->loginAsOliver();
+        $driver = $this->getSession()->getDriver();
+
+        if ($driver instanceof Selenium2Driver) {
+            $this->getSession()->resizeWindow(1480, 850);
+        }
+
+        $this->loginAsOliver();
     }
 }
