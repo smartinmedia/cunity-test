@@ -1,4 +1,4 @@
-@module @friendprofile @nojs
+@module @friendprofile @js
 Feature: Look at friend
   In order to see a friends profile
   As a cunity user
@@ -11,4 +11,8 @@ Feature: Look at friend
     Then I should see "asd"
     And I should see "aaa"
 
+  @javascript
   Scenario: See number of friends
+    Given I am oliver
+    When I am on wall
+    Then I should see "Friends 2"
