@@ -18,6 +18,11 @@ class FeatureContext extends RawMinkContext
     /**
      * @var int
      */
+    const WAIT_TIMEOUT = 2;
+
+    /**
+     * @var int
+     */
     private static $_timestamp = 0;
 
     /**
@@ -80,6 +85,6 @@ class FeatureContext extends RawMinkContext
      */
     public function iWait()
     {
-        sleep(1);
+        sleep(self::WAIT_TIMEOUT);
     }
 }

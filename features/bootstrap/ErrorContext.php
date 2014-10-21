@@ -22,7 +22,7 @@ class ErrorContext extends RawMinkContext
         $driver = $this->getSession()->getDriver();
 
         if (($driver instanceof Selenium2Driver) && 4 === $event->getResult()) {
-            $directory = 'C:/xampp/htdocs/cunity/tests/screenshots/'
+            $directory = 'C:/xampp/htdocs/cunity-test/screenshots/'
                 . $event->getLogicalParent()->getFeature()->getTitle()
                 . '.'
                 . $event->getLogicalParent()->getTitle();

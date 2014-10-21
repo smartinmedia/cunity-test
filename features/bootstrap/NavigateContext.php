@@ -51,7 +51,7 @@ class NavigateContext extends RawMinkContext
 
 
         if (null === $element) {
-            throw new \InvalidArgumentException(sprintf('Cannot find text: "%s"', $fieldname));
+            throw new \InvalidArgumentException(sprintf('Cannot find name: "%s"', $fieldname));
         }
 
         $element->click();

@@ -77,7 +77,7 @@ class UserContext extends RawMinkContext
     public function iAmOliver()
     {
         return [
-            new Given('I am on "/"'),
+            new When('I am on "/"'),
             new When('I fill in "loginemail" with "' . self::USER . '"'),
             new When('I fill in "password" with "' . self::PASSWORD . '"'),
             new When('I press "Log in"')
