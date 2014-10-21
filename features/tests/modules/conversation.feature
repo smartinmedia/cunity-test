@@ -6,7 +6,7 @@ Feature: Conversation with others
 
   Scenario: See Conversations
     Given I am oliver
-    When I am on "/messages"
+    When I follow "main-menu-item-messages"
     Then I should see "Conversations"
     And I should see "Start Conversation"
 
