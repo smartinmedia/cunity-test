@@ -6,3 +6,4 @@ vendor/
 # composer.lock
 bin
 /atlassian-ide-plugin.xml
+screenshots
