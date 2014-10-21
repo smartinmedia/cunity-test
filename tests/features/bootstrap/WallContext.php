@@ -12,6 +12,6 @@ class WallContext extends RawMinkContext
      */
     public function iRemoveWallEntries()
     {
-        $returnValue = $this->getSession()->evaluateScript("jQuery.each($('.options'), function(index, value) {  });");
+//        $returnValue = $this->getSession()->evaluateScript("jQuery.each($('.options'), function(index, value) {  });");
     }
 }

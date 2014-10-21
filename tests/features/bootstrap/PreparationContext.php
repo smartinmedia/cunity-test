@@ -1,7 +1,6 @@
 <?php
 
 use Behat\Behat\Event\ScenarioEvent;
-use Behat\Behat\Event\StepEvent;
 use Behat\Mink\Driver\Selenium2Driver;
 use Behat\MinkExtension\Context\RawMinkContext;
 
@@ -25,6 +24,7 @@ class PreparationContext extends RawMinkContext
 
     /**
      * @BeforeScenario
+     * @param ScenarioEvent $event
      */
     public function maximizeWindow(ScenarioEvent $event)
     {

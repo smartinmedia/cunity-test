@@ -50,6 +50,8 @@ class FeatureContext extends RawMinkContext
 
     /**
      * @Given /^I fill in "([^"]*)" with testStringWithSpecialCharacters$/
+     * @param $field
+     * @return array
      */
     public function iFillInWithTeststringwithspecialcharacters($field)
     {

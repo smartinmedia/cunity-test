@@ -12,12 +12,12 @@ class UserContext extends RawMinkContext
     /**
      * @var string
      */
-    const USER = 'o.monneke@googlemail.com';
+    const USER = 'o.monneke@uk-koeln.de';
 
     /**
      * @var string
      */
-    const PASSWORD = '1234567890';
+    const PASSWORD = 'blub987';
 
     /**
      * @var string
@@ -36,6 +36,8 @@ class UserContext extends RawMinkContext
 
     /**
      * @When /^I fill in "([^"]*)" with testuserWithSpecialChars$/
+     * @param $field
+     * @return \Behat\Behat\Context\Step\When
      */
     public function iFillInWithTestuserwithspecialchars($field)
     {
@@ -52,6 +54,8 @@ class UserContext extends RawMinkContext
 
     /**
      * @Given /^I fill in "([^"]*)" with testuserEmail$/
+     * @param $field
+     * @return \Behat\Behat\Context\Step\When
      */
     public function iFillInWithTestuseremail($field)
     {

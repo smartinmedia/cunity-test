@@ -22,6 +22,8 @@ class NavigateContext extends RawMinkContext
 
     /**
      * @Given /^I click on "([^"]*)"$/
+     * @param $text
+     * @throws \Behat\Mink\Exception\ElementException
      */
     public function iClickOn($text)
     {
@@ -39,6 +41,8 @@ class NavigateContext extends RawMinkContext
 
     /**
      * @Given /^I click in "([^"]*)"$/
+     * @param $fieldname
+     * @throws \Behat\Mink\Exception\ElementException
      */
     public function iClickIn($fieldname)
     {
@@ -55,6 +59,8 @@ class NavigateContext extends RawMinkContext
 
     /**
      * @Given /^I click id "([^"]*)"$/
+     * @param $field
+     * @return string
      */
     public function iClickId($field)
     {
@@ -65,6 +71,8 @@ class NavigateContext extends RawMinkContext
 
     /**
      * @Given /^I click class "([^"]*)"$/
+     * @param $field
+     * @return string
      */
     public function iClickClass($field)
     {

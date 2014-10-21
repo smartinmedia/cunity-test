@@ -1,6 +1,6 @@
 <?php
 
-use Behat\MinkExtension\Context\MinkContext;
+use Behat\Mink\Driver\Selenium2Driver;
 use Behat\MinkExtension\Context\RawMinkContext;
 
 /**
@@ -14,6 +14,7 @@ class ErrorContext extends RawMinkContext
      * Works only with Selenium2Driver.
      *
      * @AfterStep
+     * @param $event
      */
     public function takeScreenshotAfterFailedStep($event)
     {
