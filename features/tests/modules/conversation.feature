@@ -14,5 +14,5 @@ Feature: Conversation with others
   Scenario: Start a conversation
     Given I am oliver
     When I am on "/messages"
-      And I click id "startConversation"
+    And I click id "startConversation"
     Then I should see "Send a message"

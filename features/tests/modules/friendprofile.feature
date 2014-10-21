@@ -4,8 +4,11 @@ Feature: Look at friend
   As a cunity user
   I need to be able see him
 
+  @javascript
   Scenario: See profile
-
-  Scenario: See pins of friend
+    Given I am oliver
+    When I follow "profile-menu-friends"
+    Then I should see "asd"
+    And I should see "aaa"
 
   Scenario: See number of friends
