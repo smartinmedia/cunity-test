@@ -12,12 +12,12 @@ class UserContext extends RawMinkContext
     /**
      * @var string
      */
-    const USER = 'o.monneke@uk-koeln.de';
+    const USER = 'o.monneke@googlemail.com';
 
     /**
      * @var string
      */
-    const PASSWORD = 'blub987';
+    const PASSWORD = '123456789';
 
     /**
      * @var string
