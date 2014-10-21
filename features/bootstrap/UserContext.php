@@ -43,12 +43,12 @@ class UserContext extends RawMinkContext
     {
         return new When(
             'I fill in "'
-            .$field
-            .'" with "'
-            .self::TESTUSER_PREFIX
-            .FeatureContext::SPECiAL_CHARS
-            .time()
-            .'"'
+            . $field
+            . '" with "'
+            . self::TESTUSER_PREFIX
+            . FeatureContext::SPECiAL_CHARS
+            . time()
+            . '"'
         );
     }
 
@@ -61,13 +61,13 @@ class UserContext extends RawMinkContext
     {
         return new When(
             'I fill in "'
-            .$field
-            .'" with "'
-            .self::TESTUSER_EMAIL_PREFIX
-            .time()
-            .'@'
-            .self::TESTUSER_EMAIL_DOMAIN
-            .'"'
+            . $field
+            . '" with "'
+            . self::TESTUSER_EMAIL_PREFIX
+            . time()
+            . '@'
+            . self::TESTUSER_EMAIL_DOMAIN
+            . '"'
         );
     }
 
@@ -78,8 +78,8 @@ class UserContext extends RawMinkContext
     {
         return [
             new Given('I am on "/"'),
-            new When('I fill in "email" with "'.self::USER.'"'),
-            new When('I fill in "password" with "'.self::PASSWORD.'"'),
+            new When('I fill in "loginemail" with "' . self::USER . '"'),
+            new When('I fill in "password" with "' . self::PASSWORD . '"'),
             new When('I press "Log in"')
         ];
     }

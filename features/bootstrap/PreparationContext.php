@@ -14,12 +14,12 @@ class PreparationContext extends RawMinkContext
      */
     public function loginAsOliver()
     {
-        $this->getSession()->visit($this->locatePath('/'));
-        $element = $this->getSession()->getPage();
-        $element->fillField('email', UserContext::USER);
-        $element->fillField('password', UserContext::PASSWORD);
-        $submit = $element->findButton('Log in');
-        $submit->click();
+//        $this->getSession()->visit($this->locatePath('/'));
+//        $element = $this->getSession()->getPage();
+//        $element->fillField('loginemail', UserContext::USER);
+//        $element->fillField('password', UserContext::PASSWORD);
+//        $submit = $element->findButton('Log in');
+//        $submit->click();
     }
 
     /**

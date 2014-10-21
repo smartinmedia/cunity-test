@@ -6,7 +6,7 @@ Feature: Login
 
   Scenario: Login with wrong data
     When I am on "/"
-      And I fill in "email" with "asdf@asdf.com"
+      And I fill in "loginemail" with "asdf@asdf.com"
       And I fill in "password" with "asdfasdf"
       And I press "Log in"
     Then I should see "Sorry"
