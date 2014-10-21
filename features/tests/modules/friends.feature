@@ -7,13 +7,13 @@ Feature: Friends
   @javascript
   Scenario: See friends
     Given I am oliver
-    When I follow "Friends"
-    Then I should see "Julian Seibert"
+    When I am on "/friends"
+    Then I should see "asd"
 
   @javascript
   Scenario: View friend's profile
     Given I am oliver
-    When I follow "Friends"
-      And I follow "Julian Seibert"
-    Then I should see "Julian Seibert"
-      And I should see "( julian )"
+    When I am on "/friends"
+    And I follow "asd"
+    Then I should see "asd"
+    And I should see "( asd )"

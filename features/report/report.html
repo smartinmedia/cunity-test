@@ -325,17 +325,17 @@
 <div class="feature">
 <ul class="tags">
 <li>@module</li>
-<li>@friendprofile</li>
+<li>@friends</li>
 <li>@js</li>
 </ul>
 <h2>
 <span class="keyword">Feature: </span>
-<span class="title">Look at friend</span>
+<span class="title">Friends</span>
 </h2>
 <p>
-In order to see a friends profile<br />
-As a cunity user<br />
-I need to be able see him<br />
+In order to interact with friends<br />
+As a usual user<br />
+I need to have friends<br />
 </p>
 
 <div class="scenario">
@@ -344,7 +344,7 @@ I need to be able see him<br />
 </ul>
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">See profile</span>
+<span class="title">See friends</span>
 
 </h3>
 <ol>
@@ -357,7 +357,43 @@ I need to be able see him<br />
 <li class="passed">
 <div class="step">
 <span class="keyword">When </span>
-<span class="text">I follow "<strong class="passed_param">profile-menu-friends</strong>"</span>
+<span class="text">I am on "<strong class="passed_param">/friends</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">asd</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">View friend's profile</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I am on "<strong class="passed_param">/friends</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">asd</strong>"</span>
 </div>
 </li>
 <li class="passed">
@@ -369,37 +405,7 @@ I need to be able see him<br />
 <li class="passed">
 <div class="step">
 <span class="keyword">And </span>
-<span class="text">I should see "<strong class="passed_param">aaa</strong>"</span>
-</div>
-</li>
-</ol>
-</div>
-<div class="scenario">
-<ul class="tags">
-<li>@javascript</li>
-</ul>
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">See number of friends</span>
-
-</h3>
-<ol>
-<li class="passed">
-<div class="step">
-<span class="keyword">Given </span>
-<span class="text">I am oliver</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">When </span>
-<span class="text">I am on wall</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">Friends 2</strong>"</span>
+<span class="text">I should see "<strong class="passed_param">( asd )</strong>"</span>
 </div>
 </li>
 </ol>
@@ -411,10 +417,10 @@ I need to be able see him<br />
 2 scenarios (<strong class="passed">2 passed</strong>)
 </p>
 <p class="steps">
-7 steps (<strong class="passed">7 passed</strong>)
+8 steps (<strong class="passed">8 passed</strong>)
 </p>
 <p class="time">
-0m16.073s
+0m15.762s
 </p>
 </div>
 <div class="switchers">
