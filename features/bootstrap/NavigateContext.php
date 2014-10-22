@@ -65,7 +65,7 @@ class NavigateContext extends RawMinkContext
     public function iClickId($field)
     {
         return (
-        $this->getSession()->evaluateScript("$('#".$field."').click();")
+        $this->getSession()->evaluateScript("$('#" . $field . "').click();")
         );
     }
 
@@ -77,7 +77,19 @@ class NavigateContext extends RawMinkContext
     public function iClickClass($field)
     {
         return (
-            $this->getSession()->evaluateScript("$('.".$field."').click();")
+        $this->getSession()->evaluateScript("$('." . $field . "').click();")
+        );
+    }
+
+    /**
+     * @Given /^I scroll "([^"]*)" to bottom$/
+     * @param $field
+     * @return string
+     */
+    public function iScrollToBottom($field)
+    {
+        return (
+        $this->getSession()->evaluateScript("$('." . $field . "').scrollTop($('." . $field . "')[0].scrollHeight);")
         );
     }
 }
