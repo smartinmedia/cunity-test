@@ -1,6 +1,5 @@
 <?php
 
-use Behat\Behat\Context\Step\Given;
 use Behat\Behat\Context\Step\When;
 use Behat\MinkExtension\Context\RawMinkContext;
 
