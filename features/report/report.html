@@ -325,42 +325,36 @@
 <div class="feature">
 <ul class="tags">
 <li>@module</li>
-<li>@memberlist</li>
-<li>@js</li>
+<li>@passwordreset</li>
+<li>@nojs</li>
 </ul>
 <h2>
 <span class="keyword">Feature: </span>
-<span class="title">Interact with other members</span>
+<span class="title">Reset password</span>
 </h2>
 <p>
-In order to interact with other members<br />
-As a cunity user<br />
-I need to be able to interact with them<br />
+In order to reset my password<br />
+As a registered user<br />
+I need to be able to reset it<br />
 </p>
 
 <div class="scenario">
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">View member list</span>
+<span class="title">See password reset link</span>
 
 </h3>
 <ol>
 <li class="passed">
 <div class="step">
 <span class="keyword">Given </span>
-<span class="text">I am oliver</span>
-</div>
-</li>
-<li class="passed">
-<div class="step">
-<span class="keyword">When </span>
-<span class="text">I follow "<strong class="passed_param">Memberlist</strong>"</span>
+<span class="text">I am on "<strong class="passed_param">/</strong>"</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">Memberlist</strong>"</span>
+<span class="text">I should see "<strong class="passed_param">I forgot my password</strong>"</span>
 </div>
 </li>
 </ol>
@@ -368,59 +362,41 @@ I need to be able to interact with them<br />
 <div class="scenario">
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">See friend's iamges</span>
+<span class="title">See password reset form</span>
 
 </h3>
 <ol>
-</ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am on "<strong class="passed_param">/</strong>"</span>
 </div>
-<div class="scenario">
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">Select friend</span>
-
-</h3>
-<ol>
-</ol>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">I forgot my password</strong>"</span>
 </div>
-<div class="scenario">
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">Send message</span>
-
-</h3>
-<ol>
-</ol>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">If you forgot or lost your password, enter your email adress your have used for registration and we will send you a link to reset your password</strong>"</span>
 </div>
-<div class="scenario">
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">Block person</span>
-
-</h3>
-<ol>
-</ol>
-</div>
-<div class="scenario">
-<h3>
-<span class="keyword">Scenario: </span>
-<span class="title">Remove pending request</span>
-
-</h3>
-<ol>
+</li>
 </ol>
 </div>
 </div>
 <div class="summary passed">
 <div class="counters">
 <p class="scenarios">
-6 scenarios (<strong class="passed">6 passed</strong>)
+2 scenarios (<strong class="passed">2 passed</strong>)
 </p>
 <p class="steps">
-3 steps (<strong class="passed">3 passed</strong>)
+5 steps (<strong class="passed">5 passed</strong>)
 </p>
 <p class="time">
-0m1.719s
+0m1.347s
 </p>
 </div>
 <div class="switchers">
