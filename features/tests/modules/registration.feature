@@ -44,8 +44,6 @@ Feature: Registration
 #        And I fill in "input-lastname" with "Monneke"
 #        And I fill in "input-password" with "test.123"
 #        And I fill in "input-password-repeat" with "test.123"
-#        And I select "m" from "sex"
-#        And I fill in "birthday" with ""
 #        And I press "Register"
 #      Then I should not see "This field cannot be blank!"
 #        And I should not see "Email-Address already in use"
