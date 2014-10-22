@@ -23,13 +23,13 @@ Feature: website
     Given I am on "/"
     When I follow "Privacy"
     Then I should see "Privacy Policy"
-      And I should not see "Lorem ipsum"
+      And I should see "Lorem ipsum"
 
   Scenario: See terms & conditions
     Given I am on "/"
     When I follow "Terms and Conditions"
     Then I should see "Terms & Conditions"
-      And I should not see "Lorem ipsum"
+      And I should see "Lorem ipsum"
 
   Scenario: See contacts
     Given I am on "/"
