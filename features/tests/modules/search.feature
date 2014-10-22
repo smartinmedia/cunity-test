@@ -4,10 +4,15 @@ Feature: Search for users
   As a cunity user
   I need to be able to find them
 
+  @javascript
+  Scenario: See result for nonsense data
+    When I am oliver
+    And I fill in "q" with "äöü"
+    And I wait
+    Then I should see "No results for your query"
+
+  @javascript
   Scenario: See preview of search results for friends
-
-  Scenario: See search results for friends
-
-  Scenario: See preview of search results for other members
-
-  Scenario: See search results for other members
+    When I am oliver
+    And I fill in "q" with "asd"
+    Then I should see "asd"
