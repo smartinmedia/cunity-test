@@ -12,6 +12,14 @@ class WallContext extends RawMinkContext
      */
     public function iRemoveWallEntries()
     {
-//        $returnValue = $this->getSession()->evaluateScript("jQuery.each($('.options'), function(index, value) {  });");
+        return $this->getSession()->evaluateScript("$('.deletepost i').click();");
+    }
+
+    /**
+     * @When /^I confirm remove wall entries$/
+     */
+    public function iConfirmRemoveWallEntries()
+    {
+        return $this->getSession()->evaluateScript("$('button[data-bb-handler=\"confirm\"]').click();");
     }
 }

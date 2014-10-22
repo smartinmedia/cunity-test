@@ -6,11 +6,12 @@ Feature: My wall
 
   @javascript
   Scenario: Write on my wall
-    Given I am on wall
-    When I click id "postmsg"
-      And I fill in "postmsg" with testStringWithSpecialCharacters
-      And I press "newsfeed-post-button"
-      And I wait
+    Given I am oliver
+    When I am on wall
+    And I click id "postmsg"
+    And I fill in "postmsg" with testStringWithSpecialCharacters
+    And I press "newsfeed-post-button"
+    And I wait
     Then I should see testStringWithSpecialCharacters
 
 #    @javascript
@@ -22,15 +23,20 @@ Feature: My wall
 
   @javascript
   Scenario: Post YouTube video on my wall
-    Given I am on wall
-    When I click id "postmsg"
-      And I fill in "postmsg" with "https://www.youtube.com/watch?v=escFywxs5oA"
-      And I press "newsfeed-post-button"
-      And I wait
+    Given I am oliver
+    When I am on wall
+    And I click id "postmsg"
+    And I fill in "postmsg" with "https://www.youtube.com/watch?v=escFywxs5oA"
+    And I press "newsfeed-post-button"
+    And I wait
     Then I should see "TeamCity: Beyond Continuous Integration"
 
-    @javascript
-    Scenario: I remove old posts
-      Given I am on wall
-      When I remove wall entries
-      Then I should see "There are no posts to show"
+  @javascript
+  Scenario: I remove old posts
+    Given I am oliver
+    When I am on wall
+    When I remove wall entries
+    And I wait
+    And I confirm remove wall entries
+    And I wait
+    Then I should see "There are no posts to show"
