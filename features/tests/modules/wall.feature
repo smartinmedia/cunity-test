@@ -14,13 +14,6 @@ Feature: My wall
     And I wait
     Then I should see testStringWithSpecialCharacters
 
-#    @javascript
-#    Scenario: Post picture on my wall
-#      Given I am oliver
-#      When I follow "Wall"
-#        And I click ""
-#        And I attach the file "C:\xampp\htdocs\cunity\trunk\style\CunityRefreshed\screenshot.jpg" to ""
-
   @javascript
   Scenario: Post YouTube video on my wall
     Given I am oliver
