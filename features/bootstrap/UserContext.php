@@ -83,4 +83,16 @@ class UserContext extends RawMinkContext
             new When('I press "Log in"')
         ];
     }
+
+    /**
+     * @Given /^I fill in "([^"]*)" with password$/
+     * @param $field
+     * @return array
+     */
+    public function iFillInWithPassword($field)
+    {
+        return [
+            new When('I fill in "'.$field.'" with "'.self::PASSWORD.'"')
+        ];
+    }
 }

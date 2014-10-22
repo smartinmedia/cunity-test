@@ -325,36 +325,36 @@
 <div class="feature">
 <ul class="tags">
 <li>@module</li>
-<li>@passwordreset</li>
-<li>@nojs</li>
+<li>@profile</li>
+<li>@js</li>
 </ul>
 <h2>
 <span class="keyword">Feature: </span>
-<span class="title">Reset password</span>
+<span class="title">My profile</span>
 </h2>
 <p>
-In order to reset my password<br />
-As a registered user<br />
-I need to be able to reset it<br />
+In order edit my profile<br />
+As a usual user<br />
+I need to be loggedin<br />
 </p>
 
 <div class="scenario">
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">See password reset link</span>
+<span class="title">See profile edit button</span>
 
 </h3>
 <ol>
 <li class="passed">
 <div class="step">
 <span class="keyword">Given </span>
-<span class="text">I am on "<strong class="passed_param">/</strong>"</span>
+<span class="text">I am oliver</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">I forgot my password</strong>"</span>
+<span class="text">I should see "<strong class="passed_param">Edit profile</strong>"</span>
 </div>
 </li>
 </ol>
@@ -362,26 +362,638 @@ I need to be able to reset it<br />
 <div class="scenario">
 <h3>
 <span class="keyword">Scenario: </span>
-<span class="title">See password reset form</span>
+<span class="title">See profile edit form</span>
 
 </h3>
 <ol>
 <li class="passed">
 <div class="step">
 <span class="keyword">Given </span>
-<span class="text">I am on "<strong class="passed_param">/</strong>"</span>
+<span class="text">I am oliver</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">When </span>
-<span class="text">I follow "<strong class="passed_param">I forgot my password</strong>"</span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
 </div>
 </li>
 <li class="passed">
 <div class="step">
 <span class="keyword">Then </span>
-<span class="text">I should see "<strong class="passed_param">If you forgot or lost your password, enter your email adress your have used for registration and we will send you a link to reset your password</strong>"</span>
+<span class="text">I should see "<strong class="passed_param">General</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Change password</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Delete Account</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update profile</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">Save</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Your changes were saved successfully!</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See password change form</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Change password</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Current Password</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update password with wrong current password</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Change password</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">old-password</strong>" with "<strong class="passed_param">987654321</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password</strong>" with "<strong class="passed_param">123456</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password-rep</strong>" with "<strong class="passed_param">123456</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">updatepassword</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">The current password is wrong</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update password with wrong different new passwords</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Change password</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">old-password</strong>" with password</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password</strong>" with "<strong class="passed_param">123456</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password-rep</strong>" with "<strong class="passed_param">654321</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">updatepassword</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">The new passwords do not match</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update password</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Change password</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">old-password</strong>" with password</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password</strong>" with password</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I fill in "<strong class="passed_param">new-password-rep</strong>" with password</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">updatepassword</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Password changed successfully!</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See Delete Account form</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Delete Account</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Yes, I am sure. Delete my account</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See Privacy settings</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-privacy</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Who is allowed to search you?</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Who is allowed to see your profile-pins?</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Who is allowed to send you messages?</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Who is allowed to see your Newsfeed-Posts?</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update Privacy settings</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-privacy</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">saveprivacy</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Privacy settings changed successfully!</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See profile image form</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-images</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Edit My Profile Image</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Profile Image</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Title Image</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See title image form</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-images</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">Title Image</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Edit My Title Image</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Profile Image</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I should see "<strong class="passed_param">Title Image</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">See Notification settings</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-notifications</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Notifications-Settings</strong>"</span>
+</div>
+</li>
+</ol>
+</div>
+<div class="scenario">
+<ul class="tags">
+<li>@javascript</li>
+</ul>
+<h3>
+<span class="keyword">Scenario: </span>
+<span class="title">Update Privacy settings</span>
+
+</h3>
+<ol>
+<li class="passed">
+<div class="step">
+<span class="keyword">Given </span>
+<span class="text">I am oliver</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">When </span>
+<span class="text">I follow "<strong class="passed_param">Edit profile</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I follow "<strong class="passed_param">profile-menu-edit-notifications</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I press "<strong class="passed_param">savenotification</strong>"</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">And </span>
+<span class="text">I wait</span>
+</div>
+</li>
+<li class="passed">
+<div class="step">
+<span class="keyword">Then </span>
+<span class="text">I should see "<strong class="passed_param">Notification settings changed successfully!</strong>"</span>
 </div>
 </li>
 </ol>
@@ -390,13 +1002,13 @@ I need to be able to reset it<br />
 <div class="summary passed">
 <div class="counters">
 <p class="scenarios">
-2 scenarios (<strong class="passed">2 passed</strong>)
+14 scenarios (<strong class="passed">14 passed</strong>)
 </p>
 <p class="steps">
-5 steps (<strong class="passed">5 passed</strong>)
+83 steps (<strong class="passed">83 passed</strong>)
 </p>
 <p class="time">
-0m1.347s
+1m21.761s
 </p>
 </div>
 <div class="switchers">
