@@ -10,8 +10,9 @@ Feature: Gallery
     Then I should see "New Album"
     And I should see "Posted Images"
 
+  @javascript
   Scenario: View fotos in a gallery
     When I am oliver
-    And I follow "Gallery"
-    And I follow "Posted Images"
-    Then I should see "Posted Images"
+    And I am on "/gallery"
+    And I follow "testalbum"
+    Then I should see "testalbum"
