@@ -1,4 +1,4 @@
-@module @memberlist @js
+@module @memberlist @nojs
 Feature: Interact with other members
   In order to interact with other members
   As a cunity user
