@@ -21,6 +21,11 @@ class FeatureContext extends RawMinkContext
     const WAIT_TIMEOUT = 2;
 
     /**
+     * @var bool
+     */
+    const TAKE_SCREENSHOTS_ON_ERROR = false;
+
+    /**
      * @var int
      */
     private static $_timestamp = 0;

@@ -79,6 +79,7 @@ class UserContext extends RawMinkContext
             new When('I am on "/"'),
             new When('I fill in "loginemail" with "' . self::USER . '"'),
             new When('I fill in "password" with "' . self::PASSWORD . '"'),
+            new When('I check "save-login"'),
             new When('I press "Log in"')
         ];
     }

@@ -21,7 +21,7 @@ class ErrorContext extends RawMinkContext
         /** @var $driver Selenium2Driver */
         $driver = $this->getSession()->getDriver();
 
-        if (($driver instanceof Selenium2Driver) && 4 === $event->getResult()) {
+        if (($driver instanceof Selenium2Driver) && 4 === $event->getResult() && FeatureContext::TAKE_SCREENSHOTS_ON_ERROR) {
             $directory = 'C:/xampp/htdocs/cunity-test/screenshots/'
                 . $event->getLogicalParent()->getFeature()->getTitle()
                 . '.'
@@ -41,7 +41,7 @@ class ErrorContext extends RawMinkContext
                 . str_replace('.', '_', $filename)
                 . '.png';
             $handle = fopen($file, 'w');
-            sleep(0.5);
+            sleep(FeatureContext::WAIT_TIMEOUT);
             fwrite($handle, $driver->getScreenshot());
         }
     }
