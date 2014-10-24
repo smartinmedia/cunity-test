@@ -10,19 +10,6 @@ use Behat\MinkExtension\Context\RawMinkContext;
 class PreparationContext extends RawMinkContext
 {
     /**
-     *
-     */
-    public function loginAsOliver()
-    {
-//        $this->getSession()->visit($this->locatePath('/'));
-//        $element = $this->getSession()->getPage();
-//        $element->fillField('loginemail', UserContext::USER);
-//        $element->fillField('password', UserContext::PASSWORD);
-//        $submit = $element->findButton('Log in');
-//        $submit->click();
-    }
-
-    /**
      * @BeforeScenario
      * @param ScenarioEvent $event
      */
@@ -34,7 +21,5 @@ class PreparationContext extends RawMinkContext
         if ($driver instanceof Selenium2Driver) {
             $this->getSession()->resizeWindow(1480, 850);
         }
-
-        $this->loginAsOliver();
     }
 }
