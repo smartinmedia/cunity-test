@@ -1,4 +1,4 @@
 cunity-test
 ===========
 
-Behavior tests
+Behavior tests for cunity
