@@ -1,22 +1,5 @@
-composer.phar
-vendor/
-
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
 /atlassian-ide-plugin.xml
-screenshots
-/bin/phpcbf
-/bin/phpcbf.bat
-/bin/phpcs
-/bin/phpcs.bat
-/bin/phpmd
-/bin/phpmd.bat
-/bin/phpunit
-/bin/phpunit.bat
-/bin/webunit
-/bin/webunit.bat
-/bin/behat
-/bin/behat.bat
-/bin/pdepend
-/bin/pdepend.bat
+vendor
+/data/config.xml
+/composer.lock
+bin
