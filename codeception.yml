@@ -1,0 +1,42 @@
+imports:
+  - { resource: parameters.yml }
+
+actor: Tester
+paths:
+    tests: ../../tests
+    log: ../../tests/_output
+    data: ../../tests/_data
+    helpers: ../../tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: false
+    memory_limit: 1024M
+modules:
+    config:
+        PhpBrowser:
+             url: 'http://10.135.0.52/'
+             proxy: ''
+        WebDriver:
+             url: 'http://10.135.0.52/'
+             host: '10.135.0.54'
+             browser: 'chrome'
+             window_size: maximize
+             wait: 1
+             capabilities:
+                  unexpectedAlertBehaviour: 'ignore'
+env:
+    chrome:
+        modules:
+            config:
+                WebDriver:
+                    browser: 'chrome'
+    firefox:
+        modules:
+            config:
+                WebDriver:
+                    browser: 'firefox'
+    ie:
+        modules:
+            config:
+                WebDriver:
+                    browser: 'ie'
