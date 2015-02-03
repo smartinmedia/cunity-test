@@ -95,4 +95,15 @@ class SmokeCest
         $I->click('#main-menu-item-administration');
         $I->see('Please confirm your login to enter the admin-panel!');
     }
+
+    /**
+     * @param FunctionalTester $I
+     */
+    public function seeMemberList(FunctionalTester $I)
+    {
+        $I->wantToTest('if I can see the memberlist');
+        TestCommons::authentificate($I, 'owner');
+        $I->click(['link' => 'Memberlist']);
+        $I->see('Memberlist');
+    }
 }
