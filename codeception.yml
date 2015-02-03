@@ -1,12 +1,9 @@
-imports:
-  - { resource: parameters.yml }
-
 actor: Tester
 paths:
-    tests: ../../tests
-    log: ../../tests/_output
-    data: ../../tests/_data
-    helpers: ../../tests/_support
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
 settings:
     bootstrap: _bootstrap.php
     colors: false
@@ -14,16 +11,15 @@ settings:
 modules:
     config:
         PhpBrowser:
-             url: 'http://10.135.0.52/'
-             proxy: ''
+             url: 'http://10.135.0.52/cunity/'
         WebDriver:
-             url: 'http://10.135.0.52/'
+             url: 'http://10.135.0.52/cunity/'
              host: '10.135.0.54'
              browser: 'chrome'
              window_size: maximize
              wait: 1
              capabilities:
-                  unexpectedAlertBehaviour: 'ignore'
+                  unexpectedAlertBehaviour: 'accept'
 env:
     chrome:
         modules:
