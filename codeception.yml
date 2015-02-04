@@ -11,15 +11,17 @@ settings:
 modules:
     config:
         PhpBrowser:
-             url: 'http://10.135.0.52/cunity/'
+            url: 'http://10.135.0.52/cunity/'
+            curl:
+                CURLOPT_PROXY: ''
         WebDriver:
-             url: 'http://10.135.0.52/cunity/'
-             host: '10.135.0.54'
-             browser: 'chrome'
-             window_size: maximize
-             wait: 1
-             capabilities:
-                  unexpectedAlertBehaviour: 'accept'
+            url: 'http://10.135.0.52/cunity/'
+            host: '10.135.0.54'
+            browser: 'chrome'
+            window_size: maximize
+            wait: 1
+            capabilities:
+                unexpectedAlertBehaviour: 'accept'
 env:
     chrome:
         modules:
